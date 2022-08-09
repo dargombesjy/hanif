@@ -1,0 +1,44 @@
+$color-main: rgb(203, 207, 248);
+$color-background: rgb(184, 181, 181);
+$color-menu: rgb(243, 243, 232);
+$color-tablehead: rgb(239,239,239);
+$color-dropdown: rgb(10, 10, 10);
+$color-utils-background: rgb(240, 239, 239);
+
+// fill and color
+.bg-normal {
+  background-color: #fff;
+}
+.bg-active {
+  background-color: lightsteelblue;
+}
+.bg-dropdown {
+  background-color: rgb(240, 237,237);
+}
+.bg-muted {
+  background-color: #f5f4f4;
+}
+.bg-info {
+  background-color: rgb(240, 240, 240);
+  /* color: rgb(3, 3, 75); */
+}
+.bg-danger {
+  background-color: rgb(227, 75, 75);
+  color: #ffffff;
+}
+.bg-action {
+  background-color: #ffffff
+}
+  
+.message-error {
+  color: #d33c40;
+}
+.message-success {
+  color: #32a95d;
+}
+.link {
+  color: #427fb9;
+  text-decoration: underline;
+  cursor:pointer;
+}
+  

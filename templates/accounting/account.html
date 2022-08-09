@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}Account{% endblock title %}
+
+{% block content %}
+    <input type="submit" value="Save" form="input-form"/>
+    <form id="input-form" method="POST">
+    {{ data.name.label}} {{ data.name() }}
+    {{ data.date.label }} {{ data.date() }}
+    {{ data.ref.label }} {{ data.ref() }}
+    {{ data.journal_id.label }} {{ data.journal_id() }}
+    {{ data.partner_id.label }} {{ data.partner_id() }}
+    
+    <table>
+    <thead>
+        <tr>
+        {% with head=data.lines[0].form %}
+            <td>{{ head.name.label }}</td>
+            <td>{{ head.indicator.label }}</td>
+            <td>{{ head.amount.label }}</td>
+        {% endwith %}
+        </tr>
+    </thead>
+    <tbody>
+        {% for line in data.lines %}
+        <tr id="{{ line.id }}" name="{{ line.name }}">
+            <td>{{ line.form.name() }}</td>
+            <td>{{ line.form.indicator() }}</td>
+            <td>{{ line.form.amount() }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+    </table>
+    </form>
+{% endblock content %}
